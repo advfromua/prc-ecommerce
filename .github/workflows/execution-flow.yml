@@ -75,3 +75,11 @@ jobs:
         run: ls
       - name: Deploy
         run: echo "Deploying..."
+  elaboration-job:
+    if: failure()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Elaboration step
+        run: |
+          echo: "This job is intended to be fired only on failure and provide additional details"
+          echo: ${{ github }}
