@@ -72,7 +72,7 @@ jobs:
         with:
           name: dist-files
       - name: Output contents
-        run: ls
+        run: ls pipi istest failed ?
       - name: Deploy
         run: echo "Deploying..."
   elaboration-job:
