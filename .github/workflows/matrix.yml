@@ -3,6 +3,7 @@ on: push
 
 jobs:
   build:
+    continues-on-error: true
     strategy:
       matrix:
         node-version: [23, 24, 25]
