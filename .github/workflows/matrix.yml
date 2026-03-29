@@ -17,7 +17,7 @@ jobs:
               operating-system: windows-latest
             - node-version: 23
               operating-system: macos-latest
-            - node-version: 23
+            - node-version: 24
               operating-system: macos-latest
 
     runs-on: ${{ matrix.operating-system }}
