@@ -68,6 +68,8 @@ jobs:
   deploy:
     needs: test
     uses: ./.github/workflows/reusable.yml
+    with:
+      artifact-name: dist
   elaboration-job:
     needs: [lint, test, build, deploy]
     if: failure()
