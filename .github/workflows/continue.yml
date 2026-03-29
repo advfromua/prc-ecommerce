@@ -86,4 +86,4 @@ jobs:
       - name: Elaboration step
         run: |
           echo: "This job is intended to be fired only on failure and provide additional details"
-          echo: ${{toJSON(github)}}
+          echo: "${{toJSON(github)}}"
