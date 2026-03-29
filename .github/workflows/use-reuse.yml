@@ -75,7 +75,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print deploy result
-        run: echo "Deploy result is ${{ needs.deploy.outputs}}"
+        run: echo "Deploy result is ${{ toJSON(needs.deploy.outputs)}}"
   elaboration-job:
     needs: [lint, test, build, deploy]
     if: failure()
