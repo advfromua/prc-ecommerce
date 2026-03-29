@@ -70,12 +70,12 @@ jobs:
     uses: ./.github/workflows/reusable.yml
     with:
       artifact-name: test-report
-    print-deploy-result:
-      needs: deploy
-      runs-on: ubuntu-latest
-      steps:
-        - name: Print deploy result
-          run: echo "Deploy result is ${{ needs.deploy.outputs.outcome }}"
+  print-deploy-result:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print deploy result
+        run: echo "Deploy result is ${{ needs.deploy.outputs.outcome }}"
   elaboration-job:
     needs: [lint, test, build, deploy]
     if: failure()
