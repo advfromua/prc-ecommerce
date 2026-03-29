@@ -9,7 +9,7 @@ jobs:
         node-version: [23, 24, 25]
         operating-system: [ubuntu-latest, windows-latest]
         include: 
-          - node-version: 21
+          - node-version: 22
             operating-system: ubuntu-latest
         exclude:
             - node-version: 25
