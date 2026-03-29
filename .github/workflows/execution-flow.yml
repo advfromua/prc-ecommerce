@@ -61,7 +61,7 @@ jobs:
         uses: actions/upload-artifact@v6
         with:
           name: dist
-          path: ./node_modules/@adobe/css-tools/
+          path: **/dist
       - name: Build website
         id: build-website
         run: npm run build
