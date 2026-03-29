@@ -10,7 +10,7 @@ on:
        outputs:
           result:
             description: The result of deployment operation
-            value: ${{ steps.deploy.outputs.result }
+            value: ${{ steps.deploy.outputs.result }}
         
 
 jobs:
