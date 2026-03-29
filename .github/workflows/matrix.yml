@@ -7,13 +7,19 @@ jobs:
     strategy:
       matrix:
         node-version: [23, 24, 25]
-        operating-system: [ubuntu-latest, windows-latest]
+        operating-system: [ubuntu-latest, windows-latest, macos-latest]
         include: 
           - node-version: 22
             operating-system: ubuntu-latest
+            
         exclude:
             - node-version: 25
               operating-system: windows-latest
+            - node-version: 23
+              operating-system: macos-latest
+            - node-version: 23
+              operating-system: macos-latest
+
     runs-on: ${{ matrix.operating-system }}
     steps:
         - name: Get code
